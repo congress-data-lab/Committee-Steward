@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this repository or its release artifacts, please cite it using this metadata."
+title: "Committee Steward"
+version: "0.1.0"
+type: software
+authors:
+  - family-names: "Colvin"
+    given-names: "Matt"
+repository-code: "https://github.com/congress-data-lab/Committee-Steward"
+abstract: "Reconstructs House and Senate standing-committee membership intervals from official congressional sources."
+keywords:
+  - congressional committees
+  - committee membership
+  - congress
+  - legislative data

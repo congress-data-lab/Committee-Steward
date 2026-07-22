@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "files": [
+    {"source": ".env.example", "destination": ".env.example"},
+    {"source": ".dockerignore", "destination": ".dockerignore"},
+    {"source": ".github/workflows/release-reproducibility.yml", "destination": ".github/workflows/release-reproducibility.yml"},
+    {"source": ".github/workflows/test.yml", "destination": ".github/workflows/test.yml"},
+    {"source": ".gitignore", "destination": ".gitignore"},
+    {"source": "CITATION.cff", "destination": "CITATION.cff"},
+    {"source": "Dockerfile", "destination": "Dockerfile"},
+    {"source": "README.md", "destination": "README.md"},
+    {"source": "config/release-files.json", "destination": "config/release-files.json"},
+    {"source": "config/release-validation-policy.json", "destination": "config/release-validation-policy.json"},
+    {"source": "config/source-classification.json", "destination": "config/source-classification.json"},
+    {"source": "data/manifests/manifest_113.csv", "destination": "manifests/113.csv"},
+    {"source": "data/manifests/manifest_114.csv", "destination": "manifests/114.csv"},
+    {"source": "data/manifests/manifest_115.csv", "destination": "manifests/115.csv"},
+    {"source": "data/manifests/manifest_116.csv", "destination": "manifests/116.csv"},
+    {"source": "data/manifests/manifest_117.csv", "destination": "manifests/117.csv"},
+    {"source": "data/manifests/manifest_118.csv", "destination": "manifests/118.csv"},
+    {"source": "data/reference/committees-current.yaml", "destination": "data/reference/committees-current.yaml"},
+    {"source": "data/reference/committees-historical.yaml", "destination": "data/reference/committees-historical.yaml"},
+    {"source": "data/reference/legislators-current.yaml", "destination": "data/reference/legislators-current.yaml"},
+    {"source": "data/reference/legislators-historical.yaml", "destination": "data/reference/legislators-historical.yaml"},
+    {"source": "docs/DATA_DICTIONARY.md", "destination": "DATA_DICTIONARY.md"},
+    {"source": "docs/DOCKER.md", "destination": "docs/DOCKER.md"},
+    {"source": "docs/METHODS.md", "destination": "METHODS.md"},
+    {"source": "docs/REPRODUCING.md", "destination": "REPRODUCING.md"},
+    {"source": "docs/export-schema.md", "destination": "docs/export-schema.md"},
+    {"source": "pyproject.toml", "destination": "pyproject.toml"},
+    {"source": "docker-compose.yml", "destination": "docker-compose.yml"},
+    {"source": "requirements.txt", "destination": "requirements.txt"},
+    {"source": "scripts/assemble_release_tree.py", "destination": "scripts/assemble_release_tree.py"},
+    {"source": "scripts/build_govinfo_committee_manifest.py", "destination": "scripts/build_govinfo_committee_manifest.py"},
+    {"source": "scripts/build_source_bundle.py", "destination": "scripts/build_source_bundle.py"},
+    {"source": "scripts/check_release_tree.py", "destination": "scripts/check_release_tree.py"},
+    {"source": "scripts/compare_release_directories.py", "destination": "scripts/compare_release_directories.py"},
+    {"source": "scripts/consolidate_provenance.py", "destination": "scripts/consolidate_provenance.py"},
+    {"source": "scripts/ensure_schema.py", "destination": "scripts/ensure_schema.py"},
+    {"source": "scripts/export_release.py", "destination": "scripts/export_release.py"},
+    {"source": "scripts/hydrate_sources.py", "destination": "scripts/hydrate_sources.py"},
+    {"source": "scripts/reproduce.py", "destination": "scripts/reproduce.py"},
+    {"source": "scripts/validate_membership_integrity.py", "destination": "scripts/validate_membership_integrity.py"},
+    {"source": "scripts/validate_release.py", "destination": "scripts/validate_release.py"},
+    {"source": "scripts/verify_source_manifest.py", "destination": "scripts/verify_source_manifest.py"},
+    {"source": "uv.lock", "destination": "uv.lock"}
+  ],
+  "trees": [
+    {"source": "core", "destination": "core", "suffixes": [".py"]},
+    {
+      "source": "db",
+      "destination": "db",
+      "suffixes": [".py", ".sql"],
+      "exclude": [
+        "migrations/0002_add_stewart_appointment_citation.sql",
+        "migrations/0003_add_stewart_reconciliation_columns.sql",
+        "migrations/0005_stewart_committee_code_mapping.sql",
+        "migrations/0009_committee_stewart_code_senate.sql",
+        "seed_committee_stewart_codes.sql"
+      ]
+    },
+    {
+      "source": "ingest",
+      "destination": "ingest",
+      "suffixes": [".py"],
+      "exclude": ["load_stewart_reference.py"]
+    },
+    {
+      "source": "tests",
+      "destination": "tests",
+      "suffixes": [".py"],
+      "exclude": ["test_load_committees.py", "test_stewart_overlap.py"]
+    },
+    {
+      "source": "validate",
+      "destination": "validate",
+      "suffixes": [".py"],
+      "exclude": ["flag_stewart_conflicts.py", "stewart_overlap.py"]
+    }
+  ]
+}

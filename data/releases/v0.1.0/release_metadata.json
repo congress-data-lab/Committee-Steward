@@ -1,0 +1,84 @@
+{
+  "artifact_files": {
+    "committee_assignments_113_118.csv": {
+      "rows": 7567,
+      "sha256": "2a9f535043da5178f2ca41c903138fb3a3fc32d285c5eee31369adba2b8b7834"
+    },
+    "committee_committees_113_118.csv": {
+      "rows": 74,
+      "sha256": "9b2e2adf5177456bc596740ab08e7387106452de64dd2e2927a583667020dbe1"
+    },
+    "committee_events_113_118.csv": {
+      "rows": 8059,
+      "sha256": "5915367600b07580e73c0c9414a8599328384ab3e466ed7d8d7440509ebcef38"
+    },
+    "committee_members_113_118.csv": {
+      "rows": 3315,
+      "sha256": "536318f0cdc7805c103c9087460bd135a3e9ea9493e080ec57f9a6bbe9028299"
+    },
+    "committee_membership_113_118.xlsx": {
+      "rows": 32023,
+      "sha256": "b8a2d4cbeb848a39bc6cb2d23800ccc44661b19022359cccffe9e97d204bc2ea"
+    },
+    "committee_rankings_113_118.csv": {
+      "rows": 12336,
+      "sha256": "642b7fbd2d203391d217c95af9a62b2326200d9a86d1b0c1221cc14872111c05"
+    },
+    "committee_sources_113_118.csv": {
+      "rows": 506,
+      "sha256": "fb8294bb6040602672f6d40129719ceb5aaf5c078853b70c77705abe34d3ec87"
+    },
+    "directory_mismatches_113_118.csv": {
+      "rows": 231,
+      "sha256": "009806cc04d303bd08480a7c5764c213c683edbde01b3ac133745ce2b2722584"
+    },
+    "validation_summary_113_118.csv": {
+      "rows": 14,
+      "sha256": "693f4c50f5d30aa37e1de530edf0ddf0c422f950f0fc9582b7e863a33c4aad65"
+    }
+  },
+  "congress_from": 113,
+  "congress_to": 118,
+  "csv_filenames": {
+    "assignments": "committee_assignments_113_118.csv",
+    "committees": "committee_committees_113_118.csv",
+    "directory_mismatches": "directory_mismatches_113_118.csv",
+    "events": "committee_events_113_118.csv",
+    "members": "committee_members_113_118.csv",
+    "rankings": "committee_rankings_113_118.csv",
+    "sources": "committee_sources_113_118.csv",
+    "validation": "validation_summary_113_118.csv"
+  },
+  "database_schema_sha256": "52ecd7552772b04dc8ae1d414e1e86637787f695cf7f2c509992aed256ed6c0c",
+  "generated_at_utc": "2026-07-17T00:00:00Z",
+  "git_commit": null,
+  "manifest_hashes": {
+    "data/manifests/crec_provenance_115.json": "5d8cd82bc04a6f3eec7661da08f60f2d8176545ef518d8c1ab9eb6fa1ff7af76",
+    "data/manifests/crec_provenance_116.json": "c97933544124febb467c617b5d3192c3034c5dd32b14bbd7b64ad964eab02cfa",
+    "data/manifests/crec_provenance_117.json": "257b4cb83241e19d6526b59d9107439389a20b62a535598fcdf872a09b6b364c",
+    "data/manifests/crec_provenance_118.json": "6302f9a72dc8144f0132be1de62624d52a4139f78f2152105173089df34addcc",
+    "data/manifests/manifest_113.csv": "2f7b9554f636deb15637b0dee45abbf930be838fd3554788fef644a85487c10f",
+    "data/manifests/manifest_114.csv": "16a4547318e11beb6343b61c1d7b651501501c64150cf912790a0a0250398164",
+    "data/manifests/manifest_115.csv": "1bfc7fda657ab1d311a06654390114cdc03b13717d14f9e3377bead105cbf652",
+    "data/manifests/manifest_116.csv": "3c1565b77ac61fe82abd847a1d3bfd4e6742b2c9c5eb1cb93acdfd34d572abca",
+    "data/manifests/manifest_117.csv": "2a3caf737e3623e04484026e5b62871a271a87963311d22e30487c5b77b4494f",
+    "data/manifests/manifest_118.csv": "6774e48972b57bde935484b58f0a9f50b1319bcd48e1f90748c057982152c292",
+    "manifests/source-bundles.json": "ddf9bebc80503ce2292ee2992ecc2416bee6c9aa7f184147bc4b9bcfd4b6c12d"
+  },
+  "release_version": "v0.1.0",
+  "row_counts": {
+    "assignments": 7567,
+    "committees": 74,
+    "directory_mismatches": 231,
+    "events": 8059,
+    "members": 3315,
+    "rankings": 12336,
+    "sources": 506,
+    "validation": 14
+  },
+  "schema_version": "1.1.0",
+  "scope": "standing",
+  "validation_policy_version": "1.1.0",
+  "workbook_filename": "committee_membership_113_118.xlsx",
+  "workbook_semantic_sha256": "a18d1343e3798e20cd9c6e0fafd5dc5eecece3d124a8cf29d58390aa5c29d1a9"
+}

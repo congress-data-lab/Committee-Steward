@@ -1,0 +1,1 @@
+"""Resolution event parsing."""

@@ -1,0 +1,51 @@
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+
+# Virtual env and installed libraries
+.venv/
+venv/
+env/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.pyre/
+.pytype/
+.omx/
+.agents/
+.claude/
+node_modules/
+logs/
+tmp/
+*.dump
+output/
+release-output/
+LOCAL_SESSION_HANDOFF.md
+
+# Package/build artifacts
+*.egg-info/
+*.egg
+.eggs/
+dist/
+build/
+bundles/
+
+# CREC and journal data (large/ignored)
+data/crec/
+data/journals/
+data/primary/
+data/resolutions/
+data/congressional_directories/
+data/manifests/*.lock
+raw/
+resolutions/
+reference/
+
+# Local evaluation and agent-development workspaces
+congress-database-guide-workspace/

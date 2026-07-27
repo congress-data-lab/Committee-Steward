@@ -20,6 +20,9 @@ __pycache__/
 .omx/
 .agents/
 .claude/
+.cursor/
+skills/
+skills-lock.json
 node_modules/
 logs/
 tmp/

@@ -536,6 +536,19 @@ def test_assignments_use_release_ids_and_distinct_date_semantics() -> None:
                 "internal_end_event_id": None,
                 "end_effective_date": None,
             },
+            {
+                "congress_no": 118,
+                "chamber": "S",
+                "bioguide_id": "C000003",
+                "committee_code": "SSAF",
+                "committee_name": "Committee on Agriculture, Nutrition, and Forestry",
+                "start_date": date(2023, 1, 3),
+                "congress_end_date": date(2025, 1, 3),
+                "membership_end_boundary": date(2024, 1, 10),
+                "internal_start_event_id": "db-3",
+                "internal_end_event_id": None,
+                "end_effective_date": None,
+            },
         ],
         release_version="v0.1.0",
         event_id_map=event_id_map,
@@ -554,6 +567,12 @@ def test_assignments_use_release_ids_and_distinct_date_semantics() -> None:
     assert natural["last_active_date"] == date(2025, 1, 2)
     assert natural["termination_effective_date"] == date(2025, 1, 3)
     assert natural["ended_early"] is False
+
+    closed_without_end_event = rows[2]
+    assert closed_without_end_event["end_release_event_id"] is None
+    assert closed_without_end_event["termination_effective_date"] == date(2024, 1, 10)
+    assert closed_without_end_event["last_active_date"] == date(2024, 1, 9)
+    assert closed_without_end_event["ended_early"] is True
 
 
 def test_source_runtime_timestamps_are_omitted_from_canonical_exports() -> None:

@@ -178,7 +178,15 @@ def build_assignment_rows(
 ) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     for raw in raw_rows:
-        termination_effective_date = raw["end_effective_date"] or raw["congress_end_date"]
+        # The membership interval can close without an end_event_id when a
+        # later APPOINTED event supersedes the prior interval. In that case,
+        # preserve the daterange's actual exclusive upper boundary instead of
+        # incorrectly treating the row as open through the end of Congress.
+        termination_effective_date = (
+            raw["end_effective_date"]
+            or raw.get("membership_end_boundary")
+            or raw["congress_end_date"]
+        )
         last_active_date = _inclusive_last_active(termination_effective_date)
         congress_last_active = _inclusive_last_active(raw["congress_end_date"])
         rows.append(
@@ -511,6 +519,7 @@ def _load_assignments(conn, congress_from: int, congress_to: int) -> list[dict[s
               cm.committee_code,
               COALESCE(cnh.name, cm.committee_code) AS committee_name,
               lower(cm.valid_daterange)::date AS start_date,
+              upper(cm.valid_daterange)::date AS membership_end_boundary,
               cg.end_date AS congress_end_date,
               cm.start_event_id AS internal_start_event_id,
               cm.end_event_id AS internal_end_event_id,

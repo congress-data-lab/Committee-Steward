@@ -250,6 +250,12 @@ def derive_rank_intervals(
                         rank += 1
                         unresolved_slots += 1
                         continue
+                    # Rank reflects the entry's fixed position in the party's
+                    # seniority order, not a live count of who is currently
+                    # active: a member's departure does not renumber anyone
+                    # ranked below them, matching the reference convention of
+                    # never reusing or closing a vacated rank.
+                    rank += 1
                     membership = active_memberships.get(entry.bioguide_id)
                     if not membership:
                         continue
@@ -258,7 +264,6 @@ def derive_rank_intervals(
                     )
                     if active_party != party_code:
                         continue
-                    rank += 1
                     results.append(
                         RankInterval(
                             membership.committee_membership_id,

@@ -64,7 +64,7 @@ def test_unresolved_source_slot_preserves_rank_gap() -> None:
     assert by_member["C000003"].unresolved_slots_before == 1
 
 
-def test_departure_compresses_later_active_ranks() -> None:
+def test_departure_does_not_renumber_later_active_ranks() -> None:
     departure = date(2024, 3, 1)
     rows = derive_rank_intervals(
         [
@@ -82,8 +82,7 @@ def test_departure_compresses_later_active_ranks() -> None:
 
     c_rows = [row for row in rows if row.bioguide_id == "C000003"]
     assert [(row.start_date, row.end_date, row.rank_in_party) for row in c_rows] == [
-        (START, departure, 3),
-        (departure, END, 2),
+        (START, END, 3),
     ]
 
 

@@ -55,8 +55,10 @@ def _parse_members_from_text(text: str) -> list[str]:
         p = p.strip().strip(".,")
         p = _strip_rank_instruction(p)
         p = _strip_when_sworn_parenthetical(p)
-        # Skip "to rank immediately after Mr. X" fragments (comma-separated, not parenthetical)
-        if p.lower().startswith("to rank"):
+        # Skip "to rank immediately after Mr. X" and bare "after Mr. X" fragments
+        # (comma-separated, not parenthetical) -- these are rank-anchor instructions
+        # attached to the preceding name, not separate members.
+        if p.lower().startswith("to rank") or p.lower().startswith("after "):
             continue
         if len(p) > 2 and (" " in p or "." in p):
             names.append(p)
@@ -64,7 +66,10 @@ def _parse_members_from_text(text: str) -> list[str]:
 
 
 MEMBER_START_RE = re.compile(r"(?i)\b(?:Mr\.?|Mrs\.?|Ms\.?|Miss)\s+")
-RANK_AFTER_RE = re.compile(r"(?i)\bto\s+rank\s+immediately\s+after\s+")
+# Matches the phrase introducing a rank anchor: either the full "to rank
+# immediately after" instruction, or the bare ", after Name" form used by
+# standalone re-ranking resolutions (e.g. "Mr. Takai, after Mrs. Lawrence").
+RANK_AFTER_RE = re.compile(r"(?i)\bto\s+rank\s+immediately\s+after\s+|,\s*after\s+")
 
 
 def _clean_observation_token(value: str) -> str:
@@ -82,7 +87,7 @@ def _rank_observations_from_text(text: str) -> list[dict]:
     main_starts: list[int] = []
     for match in matches:
         prefix = text[max(0, match.start() - 48) : match.start()]
-        if re.search(r"(?i)to\s+rank\s+immediately\s+after\s*$", prefix):
+        if re.search(r"(?i)(?:to\s+rank\s+immediately\s+after|,\s*after)\s*$", prefix):
             continue
         main_starts.append(match.start())
 

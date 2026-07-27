@@ -115,6 +115,30 @@ def test_hres_preserves_list_order_and_inline_rank_anchors(tmp_path: Path) -> No
     ]
 
 
+def test_hres_603_bare_after_reranks_without_phantom_members(tmp_path: Path) -> None:
+    xml = """<?xml version="1.0"?>
+<resolution>
+  <form><legis-num>H. RES. 603</legis-num><action>
+    <action-date date="20160204">February 4, 2016</action-date>
+  </action></form>
+  <resolution-body><section><committee-appointment-paragraph>
+    <header>Committee on Small Business:</header>
+    <text>Mr. Takai, after Mrs. Lawrence; and Ms. Adams, after Ms. Clarke of New York.</text>
+  </committee-appointment-paragraph></section></resolution-body>
+</resolution>
+"""
+    path = tmp_path / "BILLS-114hres603eh.xml"
+    path.write_text(xml, encoding="utf-8")
+
+    row = list(parse_hres_xml(path))[0]
+
+    assert row["members"] == ["Mr. Takai", "Ms. Adams"]
+    assert row["member_observations"] == [
+        {"name": "Mr. Takai", "source_ordinal": 1, "rank_after": "Mrs. Lawrence"},
+        {"name": "Ms. Adams", "source_ordinal": 2, "rank_after": "Ms. Clarke of New York"},
+    ]
+
+
 def test_hres_normalizes_commitee_typo(tmp_path: Path) -> None:
     xml = """<?xml version="1.0"?>
 <resolution>

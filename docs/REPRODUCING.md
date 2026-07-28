@@ -9,6 +9,8 @@ The native path requires Python 3.11 or later, `uv`, and a clean PostgreSQL data
 ```bash
 uv sync
 export NEON_DATABASE_URL="postgresql://user:password@host:5432/database"
+# Use one fixed release timestamp for byte-identical metadata.
+export SOURCE_DATE_EPOCH=1784246400
 ```
 
 Despite the historical environment-variable name, standard PostgreSQL works; the database need not be hosted by Neon. For an isolated PostgreSQL 16 container instead, use [Docker reproduction](DOCKER.md).
@@ -20,6 +22,11 @@ Despite the historical environment-variable name, standard PostgreSQL works; the
 - `frozen-bundle` is the default release-reproduction mode. It hydrates the exact files named in `manifests/source-bundles.json`, verifies declared sizes and SHA-256 hashes, and uses a local indexed archive or its declared HTTPS URL. It requires no GovInfo API key.
 - `local` verifies and runs against source files already present at manifest paths. It is intended for development and migration from an existing working corpus.
 - `govinfo` performs deterministic GovInfo REST discovery and bounded downloads. It requires `GOVINFO_API_KEY`. Because it does not independently recreate normalized Congressional Directory snapshots, it is a maintenance path rather than a complete historical clean-room replay by itself.
+
+GovInfo acquisition is snapshot-pinned after the first manifest is written: later
+reproduction runs reuse the existing manifest and its local files. Use
+`--refresh-govinfo` only when deliberately accepting a new live API snapshot;
+that refreshed manifest must then be reviewed and archived before release.
 
 House Journal ingestion is diagnostic and disabled by default. `--enable-journals` does not make Journal-derived events part of the canonical release. `--build-source-bundles` creates archives for a future release and is also off by default.
 

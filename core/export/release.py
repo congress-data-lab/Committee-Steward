@@ -133,14 +133,20 @@ def _iso_utc(value: datetime | None) -> str | None:
 
 def _stable_now() -> str:
     source_date_epoch = os.environ.get("SOURCE_DATE_EPOCH")
-    if source_date_epoch:
-        return (
-            datetime.fromtimestamp(int(source_date_epoch), timezone.utc)
-            .replace(microsecond=0)
-            .isoformat()
-            .replace("+00:00", "Z")
+    if not source_date_epoch:
+        raise RuntimeError(
+            "SOURCE_DATE_EPOCH is required for deterministic release export"
         )
-    return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    try:
+        epoch = int(source_date_epoch)
+    except ValueError as exc:
+        raise RuntimeError("SOURCE_DATE_EPOCH must be an integer Unix timestamp") from exc
+    return (
+        datetime.fromtimestamp(epoch, timezone.utc)
+        .replace(microsecond=0)
+        .isoformat()
+        .replace("+00:00", "Z")
+    )
 
 
 def _schema_sha256() -> str:

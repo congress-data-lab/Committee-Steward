@@ -4,6 +4,7 @@ import zipfile
 from datetime import date, datetime
 from pathlib import Path
 
+import pytest
 from openpyxl import load_workbook
 
 from core.export.release import (
@@ -604,6 +605,13 @@ def test_stable_now_honors_source_date_epoch(monkeypatch) -> None:
     monkeypatch.setenv("SOURCE_DATE_EPOCH", "1784246400")
 
     assert _stable_now() == "2026-07-17T00:00:00Z"
+
+
+def test_stable_now_requires_source_date_epoch(monkeypatch) -> None:
+    monkeypatch.delenv("SOURCE_DATE_EPOCH", raising=False)
+
+    with pytest.raises(RuntimeError, match="SOURCE_DATE_EPOCH is required"):
+        _stable_now()
 
 
 def test_scope_filter_excludes_joint_and_select_special() -> None:

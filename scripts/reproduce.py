@@ -42,6 +42,7 @@ class ReproduceConfig:
     congress_to: int
     database_url: str | None
     source_mode: str
+    refresh_govinfo: bool
     source_bundle_index: Path
     source_classification: Path
     validation_policy: Path
@@ -87,6 +88,14 @@ def parse_args(argv: list[str] | None = None) -> ReproduceConfig:
         choices=SOURCE_MODE_CHOICES,
         default=DEFAULT_SOURCE_MODE,
         help="Choose local bundle construction, frozen-bundle hydration, or GovInfo retrieval.",
+    )
+    parser.add_argument(
+        "--refresh-govinfo",
+        action="store_true",
+        help=(
+            "Explicitly rediscover live GovInfo inputs. Without this flag, an existing "
+            "GovInfo manifest is treated as the pinned source snapshot."
+        ),
     )
     parser.add_argument(
         "--source-bundle-index",
@@ -151,6 +160,7 @@ def parse_args(argv: list[str] | None = None) -> ReproduceConfig:
         congress_to=args.congress_to,
         database_url=args.database_url,
         source_mode=args.source_mode,
+        refresh_govinfo=args.refresh_govinfo,
         source_bundle_index=args.source_bundle_index.resolve(),
         source_classification=args.source_classification.resolve(),
         validation_policy=args.validation_policy.resolve(),
@@ -194,6 +204,21 @@ def _plan_source_stages(config: ReproduceConfig) -> list[StageSpec]:
 
         if config.source_mode == "govinfo":
             script = ROOT / "scripts" / "build_govinfo_committee_manifest.py"
+            manifest_args = (
+                ("--refresh-existing",)
+                if manifest.exists() and not config.refresh_govinfo
+                else ()
+            )
+            acquisition_args = (
+                manifest_args
+                if manifest_args
+                else (
+                    "--download-missing-candidate-class",
+                    "committee_assignment",
+                    "--max-downloads",
+                    "25",
+                )
+            )
             stages.append(
                 StageSpec(
                     stage_id=f"sources.{congress_no}.govinfo_manifest",
@@ -204,12 +229,9 @@ def _plan_source_stages(config: ReproduceConfig) -> list[StageSpec]:
                         str(congress_no),
                         "--output",
                         str(manifest),
-                        "--download-missing-candidate-class",
-                        "committee_assignment",
-                        "--max-downloads",
-                        "25",
+                        *acquisition_args,
                     ),
-                    input_paths=(script,),
+                    input_paths=(script, manifest) if manifest_args else (script,),
                     category="sources",
                     congress_no=congress_no,
                 )

@@ -71,7 +71,7 @@ def test_file_list_mode_reports_invalid_and_missing_paths(tmp_path: Path) -> Non
 def test_stdin_list_mode_supports_null_delimited_paths(tmp_path: Path, monkeypatch, capsys) -> None:
     _write(
         tmp_path / ".env",
-        "PROVIDER_API_KEY=sk-proj-" + "abcdefghijklmnopqrstuvwxyz123456\n",
+        "PROVIDER_API_KEY=token-" + "abcdefghijklmnopqrstuvwxyz123456\n",
     )
 
     class _FakeStdin:

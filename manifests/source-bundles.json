@@ -1,0 +1,215 @@
+{
+  "bundles": [
+    {
+      "archive": {
+        "path": "../bundles/source-bundle-113-slim.zip",
+        "sha256": "51f7ab46b0f24770ca0af4ea959ffad3a0192560792ab57751aaea882d1522e9",
+        "size_bytes": 154097418,
+        "url": "https://github.com/congress-data-lab/Committee-Steward/releases/download/v0.1.0/source-bundle-113-slim.zip"
+      },
+      "classifications": {
+        "optional": [
+          "crec_normalization_provenance",
+          "house_journal_package",
+          "house_resolution",
+          "senate_journal",
+          "senate_resolution"
+        ],
+        "required": [
+          "congressional_record_package",
+          "directory_snapshot_normalized"
+        ],
+        "required_candidate_classes": [
+          "committee_assignment"
+        ],
+        "validation_only": [
+          "directory_snapshot",
+          "house_journal"
+        ]
+      },
+      "congress_no": 113,
+      "manifest": {
+        "path": "data/manifests/manifest_113.csv",
+        "sha256": "2f7b9554f636deb15637b0dee45abbf930be838fd3554788fef644a85487c10f"
+      },
+      "schema_version": "govinfo_source_bundle_v1",
+      "tool_version": "1"
+    },
+    {
+      "archive": {
+        "path": "../bundles/source-bundle-114-slim.zip",
+        "sha256": "2e55fb01feaea40e7ff9c883f074aa32c69aa0b11feff6de60b7ba6fb8e725a8",
+        "size_bytes": 158968574,
+        "url": "https://github.com/congress-data-lab/Committee-Steward/releases/download/v0.1.0/source-bundle-114-slim.zip"
+      },
+      "classifications": {
+        "optional": [
+          "crec_normalization_provenance",
+          "house_journal_package",
+          "house_resolution",
+          "senate_journal",
+          "senate_resolution"
+        ],
+        "required": [
+          "congressional_record_package",
+          "directory_snapshot_normalized"
+        ],
+        "required_candidate_classes": [
+          "committee_assignment"
+        ],
+        "validation_only": [
+          "directory_snapshot",
+          "house_journal"
+        ]
+      },
+      "congress_no": 114,
+      "manifest": {
+        "path": "data/manifests/manifest_114.csv",
+        "sha256": "16a4547318e11beb6343b61c1d7b651501501c64150cf912790a0a0250398164"
+      },
+      "schema_version": "govinfo_source_bundle_v1",
+      "tool_version": "1"
+    },
+    {
+      "archive": {
+        "path": "../bundles/source-bundle-115-slim.zip",
+        "sha256": "c5328146d629c4fce767fbda9aca592b086a6eedef10061d84740231cb827d6d",
+        "size_bytes": 166980828,
+        "url": "https://github.com/congress-data-lab/Committee-Steward/releases/download/v0.1.0/source-bundle-115-slim.zip"
+      },
+      "classifications": {
+        "optional": [
+          "crec_normalization_provenance",
+          "house_journal_package",
+          "house_resolution",
+          "senate_journal",
+          "senate_resolution"
+        ],
+        "required": [
+          "congressional_record_package",
+          "directory_snapshot_normalized"
+        ],
+        "required_candidate_classes": [
+          "committee_assignment"
+        ],
+        "validation_only": [
+          "directory_snapshot",
+          "house_journal"
+        ]
+      },
+      "congress_no": 115,
+      "manifest": {
+        "path": "data/manifests/manifest_115.csv",
+        "sha256": "1bfc7fda657ab1d311a06654390114cdc03b13717d14f9e3377bead105cbf652"
+      },
+      "schema_version": "govinfo_source_bundle_v1",
+      "tool_version": "1"
+    },
+    {
+      "archive": {
+        "path": "../bundles/source-bundle-116-slim.zip",
+        "sha256": "2113591eda8f62d34420736c78c230e99daff765d487f1c8db06b7e1d01f4f02",
+        "size_bytes": 154109739,
+        "url": "https://github.com/congress-data-lab/Committee-Steward/releases/download/v0.1.0/source-bundle-116-slim.zip"
+      },
+      "classifications": {
+        "optional": [
+          "crec_normalization_provenance",
+          "house_journal_package",
+          "house_resolution",
+          "senate_journal",
+          "senate_resolution"
+        ],
+        "required": [
+          "congressional_record_package",
+          "directory_snapshot_normalized"
+        ],
+        "required_candidate_classes": [
+          "committee_assignment"
+        ],
+        "validation_only": [
+          "directory_snapshot",
+          "house_journal"
+        ]
+      },
+      "congress_no": 116,
+      "manifest": {
+        "path": "data/manifests/manifest_116.csv",
+        "sha256": "3c1565b77ac61fe82abd847a1d3bfd4e6742b2c9c5eb1cb93acdfd34d572abca"
+      },
+      "schema_version": "govinfo_source_bundle_v1",
+      "tool_version": "1"
+    },
+    {
+      "archive": {
+        "path": "../bundles/source-bundle-117-slim.zip",
+        "sha256": "294ffdc648c9e9f5b5a147b02492c58e0c7ad44e8b47df3a491b6bf91fa14384",
+        "size_bytes": 166192340,
+        "url": "https://github.com/congress-data-lab/Committee-Steward/releases/download/v0.1.0/source-bundle-117-slim.zip"
+      },
+      "classifications": {
+        "optional": [
+          "crec_normalization_provenance",
+          "house_journal_package",
+          "house_resolution",
+          "senate_journal",
+          "senate_resolution"
+        ],
+        "required": [
+          "congressional_record_package",
+          "directory_snapshot_normalized"
+        ],
+        "required_candidate_classes": [
+          "committee_assignment"
+        ],
+        "validation_only": [
+          "directory_snapshot",
+          "house_journal"
+        ]
+      },
+      "congress_no": 117,
+      "manifest": {
+        "path": "data/manifests/manifest_117.csv",
+        "sha256": "2a3caf737e3623e04484026e5b62871a271a87963311d22e30487c5b77b4494f"
+      },
+      "schema_version": "govinfo_source_bundle_v1",
+      "tool_version": "1"
+    },
+    {
+      "archive": {
+        "path": "../bundles/source-bundle-118-slim.zip",
+        "sha256": "8651661064fa3f4c5f6fb06b657f9ab00a504f8e918a0621cf80b909b9edd9f6",
+        "size_bytes": 138890008,
+        "url": "https://github.com/congress-data-lab/Committee-Steward/releases/download/v0.1.0/source-bundle-118-slim.zip"
+      },
+      "classifications": {
+        "optional": [
+          "crec_normalization_provenance",
+          "house_journal_package",
+          "house_resolution",
+          "senate_journal",
+          "senate_resolution"
+        ],
+        "required": [
+          "congressional_record_package",
+          "directory_snapshot_normalized"
+        ],
+        "required_candidate_classes": [
+          "committee_assignment"
+        ],
+        "validation_only": [
+          "directory_snapshot",
+          "house_journal"
+        ]
+      },
+      "congress_no": 118,
+      "manifest": {
+        "path": "data/manifests/manifest_118.csv",
+        "sha256": "6774e48972b57bde935484b58f0a9f50b1319bcd48e1f90748c057982152c292"
+      },
+      "schema_version": "govinfo_source_bundle_v1",
+      "tool_version": "1"
+    }
+  ],
+  "schema_version": "govinfo_source_bundles_v1"
+}

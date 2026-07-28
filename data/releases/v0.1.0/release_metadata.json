@@ -1,0 +1,88 @@
+{
+  "artifact_files": {
+    "committee_assignments_113_118.csv": {
+      "rows": 7630,
+      "sha256": "b023656bc95f73fede783e1510d7fc829132aed63d15a7e8d446f6fbae52496b"
+    },
+    "committee_committees_113_118.csv": {
+      "rows": 74,
+      "sha256": "9b2e2adf5177456bc596740ab08e7387106452de64dd2e2927a583667020dbe1"
+    },
+    "committee_events_113_118.csv": {
+      "rows": 8403,
+      "sha256": "8eac02c698c9aba233eca01626fdb321d0ba17f83a3ea3489941b080cd69ddb1"
+    },
+    "committee_members_113_118.csv": {
+      "rows": 3309,
+      "sha256": "ef1f6e018f4a3f6f3be585e70e9047b068a02f104825abc5f91a2170c2ca5de0"
+    },
+    "committee_membership_113_118.xlsx": {
+      "rows": 29445,
+      "sha256": "2db4790f87a19a700070413fd61013a5edc277f4432bf0c95f8970d0011c625d"
+    },
+    "committee_rankings_113_118.csv": {
+      "rows": 9347,
+      "sha256": "c0427694db15e3f8a90ca1d5e4b36a49464b3ebc6345166b7857d51f58af46c7"
+    },
+    "committee_sources_113_118.csv": {
+      "rows": 516,
+      "sha256": "15a3e9d08d94cb079dee48db381538e88da8e94a20340bc0e454a695fb0df410"
+    },
+    "directory_mismatches_113_118.csv": {
+      "rows": 226,
+      "sha256": "3f26b5db89a71fcac5bad6664065500fb5e44eb732fde08fa3654baec66c008b"
+    },
+    "validation_summary_113_118.csv": {
+      "rows": 14,
+      "sha256": "0eb17f2e0f7e551fe172e95299387aef386c24cd9ae6fd97335566cab435c4f3"
+    }
+  },
+  "congress_from": 113,
+  "congress_to": 118,
+  "csv_filenames": {
+    "assignments": "committee_assignments_113_118.csv",
+    "committees": "committee_committees_113_118.csv",
+    "directory_mismatches": "directory_mismatches_113_118.csv",
+    "events": "committee_events_113_118.csv",
+    "members": "committee_members_113_118.csv",
+    "rankings": "committee_rankings_113_118.csv",
+    "sources": "committee_sources_113_118.csv",
+    "validation": "validation_summary_113_118.csv"
+  },
+  "database_schema_sha256": "52ecd7552772b04dc8ae1d414e1e86637787f695cf7f2c509992aed256ed6c0c",
+  "generated_at_utc": "2026-07-27T10:44:15Z",
+  "git_commit": "4c2f3b8470168dfc6267b54846c3269c45f5d182",
+  "manifest_hashes": {
+    "data/manifests/crec_provenance_115.json": "5d8cd82bc04a6f3eec7661da08f60f2d8176545ef518d8c1ab9eb6fa1ff7af76",
+    "data/manifests/crec_provenance_116.json": "c97933544124febb467c617b5d3192c3034c5dd32b14bbd7b64ad964eab02cfa",
+    "data/manifests/crec_provenance_117.json": "257b4cb83241e19d6526b59d9107439389a20b62a535598fcdf872a09b6b364c",
+    "data/manifests/crec_provenance_118.json": "6302f9a72dc8144f0132be1de62624d52a4139f78f2152105173089df34addcc",
+    "data/manifests/manifest_113.csv": "bc28aadb4f97beb4dda939f9ae08f3de49f89ae6f39d707770242286c1a8d5ec",
+    "data/manifests/manifest_114.csv": "89e2de45e16a57868572da57e033f0c6d82aa8ac061bb66c954bfb9cb3401a52",
+    "data/manifests/manifest_115.csv": "9531d85a80ae46a4ed02a67e64340c65104b4f0a8e92e250787d6b3ba3664648",
+    "data/manifests/manifest_115.csv.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/manifests/manifest_116.csv": "6065747fd1e7bbec3150aa8ef0a63ffd9c65eeacd8f3b3c66965f65aa7478c15",
+    "data/manifests/manifest_116.csv.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/manifests/manifest_117.csv": "5e2f853e2e562aec1e7b23ed89687e48aa34af533016097fae04d66042f27410",
+    "data/manifests/manifest_117.csv.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/manifests/manifest_118.csv": "97ae1fe09ec7b1b9b7d5cbaaef452f463087567ee0630e221ad87ac0efeaa288",
+    "data/manifests/manifest_118.csv.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "manifests/source-bundles.json": "ddf9bebc80503ce2292ee2992ecc2416bee6c9aa7f184147bc4b9bcfd4b6c12d"
+  },
+  "release_version": "v0.1.0",
+  "row_counts": {
+    "assignments": 7630,
+    "committees": 74,
+    "directory_mismatches": 226,
+    "events": 8403,
+    "members": 3309,
+    "rankings": 9347,
+    "sources": 516,
+    "validation": 14
+  },
+  "schema_version": "1.1.0",
+  "scope": "standing",
+  "validation_policy_version": "1.1.0",
+  "workbook_filename": "committee_membership_113_118.xlsx",
+  "workbook_semantic_sha256": "6f0924f7c2f8dbf8c02022cb643ff0ad766ced6ce1c4b2629b0394fb7ec37284"
+}

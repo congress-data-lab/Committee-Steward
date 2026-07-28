@@ -1,0 +1,58 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-committee_tracking}
+      POSTGRES_USER: ${POSTGRES_USER:-committee_tracking}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-local_only}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: "no"
+
+  pipeline:
+    build:
+      context: .
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      NEON_DATABASE_URL: postgresql://${POSTGRES_USER:-committee_tracking}:${POSTGRES_PASSWORD:-local_only}@postgres:5432/${POSTGRES_DB:-committee_tracking}
+      GOVINFO_API_KEY: ${GOVINFO_API_KEY:-}
+      SOURCE_DATE_EPOCH: ${SOURCE_DATE_EPOCH:-1784246400}
+    command:
+      - python
+      - scripts/reproduce.py
+      - --congress-from
+      - ${CONGRESS_FROM:-113}
+      - --congress-to
+      - ${CONGRESS_TO:-118}
+      - --source-mode
+      - ${SOURCE_MODE:-frozen-bundle}
+      - --source-bundle-index
+      - ${SOURCE_BUNDLE_INDEX:-manifests/source-bundles.json}
+      - --output-dir
+      - /workspace/output/reproduction
+    volumes:
+      - ${OUTPUT_DIR:-./release-output}:/workspace/output
+      - ./bundles:/workspace/bundles:ro
+      - source-resolutions:/workspace/data/resolutions
+      - source-crec:/workspace/data/crec
+      - source-primary:/workspace/data/primary
+      - source-journals:/workspace/data/journals
+      - source-directories:/workspace/data/congressional_directories
+      - source-manifests:/workspace/data/manifests
+    restart: "no"
+
+volumes:
+  postgres-data:
+  source-resolutions:
+  source-crec:
+  source-primary:
+  source-journals:
+  source-directories:
+  source-manifests:

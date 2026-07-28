@@ -26,6 +26,7 @@ def _config(tmp_path: Path, **overrides: object) -> ReproduceConfig:
         "congress_to": 114,
         "database_url": None,
         "source_mode": "local",
+        "refresh_govinfo": False,
         "source_bundle_index": tmp_path / "source-bundles.json",
         "source_classification": tmp_path / "source-classification.json",
         "validation_policy": tmp_path / "release-validation-policy.json",
@@ -138,6 +139,33 @@ def test_frozen_bundle_mode_hydrates_before_schema(tmp_path: Path):
     assert stages[1].stage_id == "sources.114.hydrate"
     assert stages[2].stage_id == "schema.apply"
     assert "--index" in stages[0].command
+
+
+def test_govinfo_mode_reuses_existing_manifest_as_pinned_snapshot(monkeypatch, tmp_path: Path):
+    monkeypatch.setattr("scripts.reproduce.ROOT", tmp_path)
+    manifest = tmp_path / "manifests/113.csv"
+    manifest.parent.mkdir(parents=True)
+    manifest.write_text("snapshot\n", encoding="utf-8")
+    config = _config(tmp_path, source_mode="govinfo")
+
+    stage = plan_stages(config)[0]
+
+    assert stage.stage_id == "sources.113.govinfo_manifest"
+    assert "--refresh-existing" in stage.command
+    assert manifest in stage.input_paths
+
+
+def test_govinfo_refresh_flag_allows_live_rediscovery(monkeypatch, tmp_path: Path):
+    monkeypatch.setattr("scripts.reproduce.ROOT", tmp_path)
+    manifest = tmp_path / "manifests/113.csv"
+    manifest.parent.mkdir(parents=True)
+    manifest.write_text("snapshot\n", encoding="utf-8")
+    config = _config(tmp_path, source_mode="govinfo", refresh_govinfo=True)
+
+    stage = plan_stages(config)[0]
+
+    assert "--refresh-existing" not in stage.command
+    assert manifest not in stage.input_paths
 
 
 def test_manifest_path_prefers_production_layout_and_falls_back(monkeypatch, tmp_path: Path):

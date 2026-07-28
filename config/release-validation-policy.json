@@ -1,0 +1,13 @@
+{
+  "version": "1.1.0",
+  "directory": {
+    "congresses": [113, 114, 115, 116, 117, 118],
+    "chambers": ["H", "S"],
+    "committee_scopes": ["standing"],
+    "minimum_directory_coverage": 0.95,
+    "minimum_member_resolution": 0.99
+  },
+  "membership_integrity": {
+    "maximum_issue_rows": 0
+  }
+}

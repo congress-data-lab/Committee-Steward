@@ -1,0 +1,15 @@
+release_version,schema_version,validation_policy_version,validation_type,congress_no,chamber,snapshot_date,committee_scope,gate_status,reference_count,observed_count,overlap_count,reference_only_count,observed_only_count,directory_member_entries,resolved_directory_assignments,unresolved_member_entries,unmapped_committee_entries,unmapped_committees,member_resolution_pct,directory_coverage_pct,observed_overlap_pct
+v0.1.0,1.1.0,1.1.0,directory_overlap,113,H,2014-02-18,standing,PASS,754,774,753,1,21,754,754,0,0,0,100.000,99.867,97.287
+v0.1.0,1.1.0,1.1.0,directory_overlap,113,S,2014-02-18,standing,PASS,328,330,325,3,5,328,328,0,0,0,100.000,99.085,98.485
+v0.1.0,1.1.0,1.1.0,directory_overlap,114,H,2016-02-12,standing,PASS,740,769,735,5,34,741,740,1,0,0,99.865,99.190,95.579
+v0.1.0,1.1.0,1.1.0,directory_overlap,114,S,2016-02-12,standing,PASS,331,341,331,0,10,331,331,0,0,0,100.000,100.000,97.067
+v0.1.0,1.1.0,1.1.0,directory_overlap,115,H,2018-07-27,standing,PASS,750,776,749,1,27,750,750,0,0,0,100.000,99.867,96.521
+v0.1.0,1.1.0,1.1.0,directory_overlap,115,H,2018-10-29,standing,PASS,750,768,739,11,29,750,750,0,0,0,100.000,98.533,96.224
+v0.1.0,1.1.0,1.1.0,directory_overlap,115,S,2018-07-27,standing,PASS,345,358,345,0,13,345,345,0,0,0,100.000,100.000,96.369
+v0.1.0,1.1.0,1.1.0,directory_overlap,115,S,2018-10-29,standing,PASS,345,358,344,1,14,345,345,0,0,0,100.000,99.710,96.089
+v0.1.0,1.1.0,1.1.0,directory_overlap,116,H,2020-07-22,standing,PASS,787,792,782,5,10,787,787,0,0,0,100.000,99.365,98.737
+v0.1.0,1.1.0,1.1.0,directory_overlap,116,S,2020-07-22,standing,PASS,355,355,355,0,0,355,355,0,0,0,100.000,100.000,100.000
+v0.1.0,1.1.0,1.1.0,directory_overlap,117,H,2022-10-26,standing,PASS,825,826,820,5,6,826,825,0,0,0,99.879,99.274,99.274
+v0.1.0,1.1.0,1.1.0,directory_overlap,117,S,2022-10-26,standing,PASS,354,356,352,2,4,355,354,1,0,0,99.718,99.155,98.876
+v0.1.0,1.1.0,1.1.0,directory_overlap,118,H,2024-04-25,standing,PASS,806,804,800,6,4,806,806,0,0,0,100.000,99.256,99.502
+v0.1.0,1.1.0,1.1.0,directory_overlap,118,S,2024-04-25,standing,PASS,354,357,352,2,5,354,354,0,0,0,100.000,99.435,98.599

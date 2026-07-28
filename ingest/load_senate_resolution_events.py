@@ -127,7 +127,7 @@ def _day_before(iso_date: str) -> str:
     return (d - timedelta(days=1)).isoformat()
 
 
-# Project-relative: data/resolutions/115th/bills/sres (used when running from repository_root)
+# Project-relative: data/resolutions/115th/bills/sres (used from the repository root)
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_RESOLUTIONS_BASE = _PROJECT_ROOT / "data" / "resolutions"
 

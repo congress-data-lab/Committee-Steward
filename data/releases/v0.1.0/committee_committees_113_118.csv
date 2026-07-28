@@ -1,0 +1,75 @@
+release_version,schema_version,committee_code,chamber,committee_name,valid_start,valid_last_active_date,is_joint
+v0.1.0,1.1.0,HSAG,H,Agriculture,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSAG,H,House Committee on Agriculture,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,HSAP,H,Appropriations,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSAP,H,House Committee on Appropriations,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,HSAS,H,Armed Services,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSAS,H,House Committee on Armed Services,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,HSBA,H,Financial Services,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSBA,H,House Committee on Financial Services,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,HSBU,H,Budget,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSBU,H,House Committee on the Budget,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,HSED,H,Education and the Workforce,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSED,H,House Committee on Education and Workforce,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,HSFA,H,Foreign Affairs,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSFA,H,House Committee on Foreign Affairs,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,HSGO,H,Oversight and Government Reform,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSGO,H,House Committee on Oversight and Government Reform,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,HSHA,H,House Administration,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSHA,H,House Committee on House Administration,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,HSHM,H,Homeland Security,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSHM,H,House Committee on Homeland Security,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,HSIF,H,Energy and Commerce,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSIF,H,House Committee on Energy and Commerce,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,HSII,H,Natural Resources,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSII,H,House Committee on Natural Resources,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,HSJU,H,Judiciary,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSJU,H,House Committee on the Judiciary,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,HSPW,H,Transportation and Infrastructure,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSPW,H,House Committee on Transportation and Infrastructure,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,HSRU,H,Rules,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSRU,H,House Committee on Rules,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,HSSM,H,Small Business,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSSM,H,House Committee on Small Business,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,HSSO,H,Ethics,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSSO,H,House Committee on Ethics,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,HSSY,H,"Science, Space, and Technology",2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSSY,H,"House Committee on Science, Space, and Technology",2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,HSVR,H,Veterans' Affairs,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSVR,H,House Committee on Veterans' Affairs,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,HSWM,H,Ways and Means,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,HSWM,H,House Committee on Ways and Means,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,SLIA,S,Indian Affairs,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,SLIA,S,Senate Committee on Indian Affairs,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,SSAF,S,"Agriculture, Nutrition, and Forestry",2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,SSAF,S,"Senate Committee on Agriculture, Nutrition, and Forestry",2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,SSAP,S,Appropriations,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,SSAP,S,Senate Committee on Appropriations,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,SSAS,S,Armed Services,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,SSAS,S,Senate Committee on Armed Services,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,SSBK,S,"Banking, Housing, and Urban Affairs",2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,SSBK,S,"Senate Committee on Banking, Housing, and Urban Affairs",2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,SSBU,S,Budget,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,SSBU,S,Senate Committee on the Budget,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,SSCM,S,"Commerce, Science, and Transportation",2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,SSCM,S,"Senate Committee on Commerce, Science, and Transportation",2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,SSEG,S,Energy and Natural Resources,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,SSEG,S,Senate Committee on Energy and Natural Resources,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,SSEV,S,Environment and Public Works,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,SSEV,S,Senate Committee on Environment and Public Works,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,SSFI,S,Finance,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,SSFI,S,Senate Committee on Finance,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,SSFR,S,Foreign Relations,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,SSFR,S,Senate Committee on Foreign Relations,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,SSGA,S,Homeland Security and Governmental Affairs,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,SSGA,S,Senate Committee on Homeland Security and Governmental Affairs,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,SSHR,S,"Health, Education, Labor, and Pensions",2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,SSHR,S,"Senate Committee on Health, Education, Labor, and Pensions",2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,SSJU,S,Judiciary,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,SSJU,S,Senate Committee on the Judiciary,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,SSRA,S,Rules and Administration,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,SSRA,S,Senate Committee on Rules and Administration,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,SSSB,S,Small Business and Entrepreneurship,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,SSSB,S,Senate Committee on Small Business and Entrepreneurship,2019-01-03,2027-01-02,false
+v0.1.0,1.1.0,SSVA,S,Veterans' Affairs,2013-01-03,2019-01-02,false
+v0.1.0,1.1.0,SSVA,S,Senate Committee on Veterans' Affairs,2019-01-03,2027-01-02,false

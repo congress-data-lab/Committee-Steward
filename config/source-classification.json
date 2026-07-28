@@ -1,0 +1,20 @@
+{
+  "optional": [
+    "crec_normalization_provenance",
+    "house_journal_package",
+    "house_resolution",
+    "senate_resolution",
+    "senate_journal"
+  ],
+  "required": [
+    "congressional_record_package",
+    "directory_snapshot_normalized"
+  ],
+  "required_candidate_classes": [
+    "committee_assignment"
+  ],
+  "validation_only": [
+    "directory_snapshot",
+    "house_journal"
+  ]
+}

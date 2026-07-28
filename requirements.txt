@@ -1,0 +1,8 @@
+# Python dependencies
+PyYAML
+psycopg2-binary
+pandas
+xlrd
+openpyxl
+pdfplumber
+pytest

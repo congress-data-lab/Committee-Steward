@@ -1,0 +1,1 @@
+"""Placeholder: event type summary."""
